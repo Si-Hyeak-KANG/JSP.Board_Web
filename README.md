@@ -3,3 +3,4 @@
 
 #21.09.13~15
 웹 페이지 기능 마인드맵화, flow chart 설계
+![flow chart](./flow_chart/BoardWeb_FlowChart.jpg)
