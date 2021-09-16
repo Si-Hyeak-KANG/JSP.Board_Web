@@ -8,4 +8,4 @@
 
 #21.09.16
 ERD(관계형 데이터 모델링)- Member, board 설계
-![ERD](./ERD(관계형 데이터 모델링).jpg)
+![ERD](./ERD.jpg)
