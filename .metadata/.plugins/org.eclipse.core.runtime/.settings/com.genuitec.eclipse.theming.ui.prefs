@@ -1,9 +1,11 @@
-applyBackground=false
+applyBackground=true
 approved.defs.file.last.changed.time=1624986146000
 configurationInstallLocation=/C\:/Users/kang/eclipse/java-2020-12/eclipse/
 eclipse.preferences.version=1
-iconcolormode=primary
-last.download.attempt.time=1631627072548
-lastConfiguration=1616757864706
+iconcolormode=pastel
+iconreplacement=false
+includeThemingInOomph=false
+last.download.attempt.time=1631858451381
+lastConfiguration=1631858441190
 newinstall=true
 workbench.theme=Dark Gray
