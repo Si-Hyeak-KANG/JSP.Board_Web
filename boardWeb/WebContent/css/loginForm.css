@@ -1,0 +1,464 @@
+@import "reset.css";
+
+body {
+background-color: #dddbdb;
+}
+
+.main {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    max-width: 1440px;
+    max-height: 900px;
+    margin: auto;
+}
+
+
+/* left */
+
+.main .left-main {
+    position : absolute;
+    width: 720px;
+    height: 900px;
+    left: 0px;
+    top: 0px;
+    
+}
+
+.main .left-main .main-img {
+    position: absolute; top:0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), linear-gradient(147.14deg, rgba(103, 103, 103, 0.5) -0.33%, rgba(150, 150, 150, 0.355464) 23.65%, rgba(225, 225, 225, 0.247512) 43.48%, rgba(211, 211, 211, 0.245605) 43.49%, rgba(255, 255, 255, 0) 99.04%),url("https://images.unsplash.com/photo-1518976024611-28bf4b48222e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmxvZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main .left-main .outline {
+    position:absolute;
+    top: calc(50% - 500px/2);
+    left: calc(50% - 500px/2);
+    width: 500px;
+    height: 500px;
+    box-sizing: border-box;
+    border: 16px rgba(255, 255, 255, 0.5) solid;
+}
+
+.main .left-main .outline .title {
+    position: absolute;
+    width: 242px;
+    height: 200px;
+    left: calc(50% - 242px/2);
+    top: calc(50% - 200px/2 - 38.5px);
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 100px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.main .left-main .outline .sub-title {
+    position: absolute;
+    width: 152px;
+    height: 100px;
+    left: 155px;
+    top: 299px;
+    font-family: Segoe UI Symbol;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 100px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
+
+}
+
+
+/* right */
+
+.main .right-main {
+    position : absolute;
+    width: 720px;
+    height: 900px;
+    left: 720px;
+    top: 0px;
+    background-color:#f2f2f2;
+}
+
+/* logo */
+
+.main .right-main h1 {
+    position: absolute;
+    width: 317px;
+    height: 100px;
+    left: 225px;
+    top: 152px;
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #B0AFAF;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    -webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: rgb(0, 0, 0)
+}
+
+/* login Form */
+
+.main .right-main .login-form {
+    position: absolute;
+    width: 360px;
+    height: 450px;
+    left: 180px;
+    top: 225px;
+}
+
+.main .right-main .login-form .input-id {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 308px;
+    height: 45px;
+    left: 21px;
+    top: 52px;
+}
+
+.main .right-main .login-form .input-id p{
+    position: static;
+    width: 29px;
+    height: 39px;
+    left: 0px;
+    top: 0px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #000000;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 25px 0px 20px;
+}
+
+
+.main .right-main .login-form .input-id input{
+    position: static;
+    width: 250px;
+    height: 45px;
+    left: 58px;
+    top: 0px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-size: 27px;
+    padding-left: 12px;
+}
+
+.main .right-main .login-form .input-pw {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 308px;
+    height: 45px;
+    left: 21px;
+    top: 122px;
+}
+
+.main .right-main .login-form .input-pw p{
+    position: static;
+    width: 29px;
+    height: 39px;
+    left: 0px;
+    top: 0px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #000000;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 25px 0px 20px;
+}
+
+.main .right-main .login-form .input-pw input{
+    position: static;
+    width: 250px;
+    height: 45px;
+    left: 58px;
+    top: 0px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    font-size: 27px;
+    padding-left: 12px;
+}
+
+/* memer info */
+
+.main .right-main .login-form .mid {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 26px;
+    top : 200px;
+    width: 350px;
+    height: 20px;
+}
+
+.main .right-main .login-form .join-member {
+    margin-right: 15px;
+}
+
+.main .right-main .login-form .join-member a{
+    text-decoration: none;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.001em;
+    color: #000000;
+}
+
+.main .right-main .login-form .search-id {
+    padding: 0 15px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;;
+}
+
+.main .right-main .login-form .search-id a{
+    text-decoration: none;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.001em;
+    color: #000000;
+}
+
+.main .right-main .login-form .search-pw {
+    padding-left: 15px;
+    
+}
+
+.main .right-main .login-form .search-pw a{
+    text-decoration: none;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.001em;
+    color: #000000;
+}
+
+/* login btn */
+
+.main .right-main .login-form #login-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 122px;
+    
+    position: absolute;
+    width: 300px;
+    height: 45px;
+    left: 52px;
+    top: 245px;
+    
+    background: #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    cursor: pointer;
+}
+
+.main .right-main .login-form #login-btn:hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 122px;
+    
+    position: absolute;
+    width: 300px;
+    height: 45px;
+    left: 52px;
+    top: 245px;
+    
+    background: #c4c4c483;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    cursor: pointer;
+}
+
+.main .right-main .login-form #facebook-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 24px;
+    position: absolute;
+    width: 300px;
+    height: 45px;
+    left: 52px;
+    top: 305px;
+    background: rgba(31, 134, 255, 0.71);
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    cursor: pointer;
+    background-image: url("https://img.icons8.com/color/2x/facebook-circled.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 15px;
+}
+
+.main .right-main .login-form #facebook-btn:hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 24px;
+    position: absolute;
+    width: 300px;
+    height: 45px;
+    left: 52px;
+    top: 305px;
+    background: rgba(31, 136, 255, 0.438);
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    cursor: pointer;
+    background-image: url("https://img.icons8.com/color/2x/facebook-circled.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 15px;
+}
+
+.main .right-main .login-form #kakao-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 24px;
+    position: absolute;
+    width: 300px;
+    height: 45px;
+    left: 52px;
+    top: 365px;
+    background: rgba(242, 201, 76, 0.8);
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    cursor: pointer;
+    background-image: url("https://img.icons8.com/color/452/kakaotalk.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 15px;
+}
+
+.main .right-main .login-form #kakao-btn:hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 24px;
+    position: absolute;
+    width: 300px;
+    height: 45px;
+    left: 52px;
+    top: 365px;
+    background: rgba(242, 200, 76, 0.418);
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    cursor: pointer;
+    background-image: url("https://img.icons8.com/color/452/kakaotalk.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 15px;
+}
