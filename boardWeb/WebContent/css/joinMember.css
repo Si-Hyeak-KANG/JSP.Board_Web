@@ -1,0 +1,357 @@
+@import "reset.css";
+
+body {
+background-color: #dddbdb;
+}
+
+.main {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    max-width: 1440px;
+    max-height: 900px;
+    margin: auto;
+    background-color: #F2F2F2;
+}
+
+.main .join-form {
+    position: absolute;
+    width: 800px;
+    height: 769px;
+    left: 320px;
+    top: 63px;
+}
+
+.main .join-form h1 {
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Space Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 100px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #B0AFAF;
+    box-sizing: border-box;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    -webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: rgb(0, 0, 0)
+}
+
+/* join form */
+
+.main .join-form .input-name {
+    position: absolute;
+    top:165px;
+    left:150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 620px;
+    height: 60px;
+}
+
+.main .join-form .input-name p{
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 29px;
+}
+
+.main .join-form .input-name input{
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 217px;
+    height: 35px;
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+.main .join-form .input-id {
+    position: absolute;
+    top:220px;
+    left:150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 620px;
+    height: 60px;
+}
+
+.main .join-form .input-id p{
+    width: 29px;
+    height: 39px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #000000;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 35px;
+}
+
+.main .join-form .input-id input{
+    width: 217px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 0 5px;
+    margin-right: 50px;
+}
+
+.main .join-form .input-id .confirmID {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 35px;
+    background: #C4C4C4;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+    cursor: pointer;   
+}
+
+.main .join-form .input-id .confirmID:hover {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 35px;
+    background: #c4c4c462;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: #000000;
+    cursor: pointer;   
+}
+
+
+.main .join-form .input-pw {
+    position: absolute;
+    top:275px;
+    left:150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 620px;
+    height: 60px;
+}
+
+.main .join-form .input-pw p{
+    width: 29px;
+    height: 39px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #000000;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 35px;
+}
+
+.main .join-form .input-pw input{
+    width: 350px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+.main .join-form .input-repw {
+    position: absolute;
+    top:330px;
+    left:150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 620px;
+    height: 60px;
+}
+
+.main .join-form .input-repw p{
+    width: 67px;
+    height: 39px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #000000;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    margin: 0px 27px 0px 6px;
+}
+
+.main .join-form .input-repw input{
+    width: 350px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+.main .join-form .input-email {
+    position: absolute;
+    top:385px;
+    left:150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 620px;
+    height: 60px;
+}
+
+.main .join-form .input-email p{
+    width: 67px;
+    height: 39px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #000000;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    margin: 0px 18px 0px 18px;
+}
+
+.main .join-form .input-email input{
+    width: 350px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+.main .join-form .check-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    position:relative;
+    top: 380px;
+}
+
+.main .join-form .check-state #user {
+    margin-right: 10px;
+}
+
+.main .join-form .check-state #admit {
+    margin: 0 10px 0 50px;
+}
+
+.main .join-form .check-state p {
+    font-family: Sofadi One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+/* btn */
+.main .join-form .join-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:410px;
+}
+
+#joinMember {
+    width: 320px;
+    height: 36px;
+    background: #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0.09em;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.main .join-form .join-btn .back {
+    width: 120px;
+    height:36px;
+    background: #FF3232;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.09em;
+    cursor: pointer;
+}
+

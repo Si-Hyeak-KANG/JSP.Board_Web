@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/joinMember.css"/>
+</head>
+<body>
+    <div class="main">
+        <div class="join-form">
+            <h1>회원가입</h1>
+
+            <!-- join form -->
+            <form action="">
+                <div class="input-name">
+                    <p>이름</p>
+                    <input type="text"/>
+                </div>
+                <div class="input-id">
+                    <p>ID</p>
+                    <input type="text"/>
+                    <button type="button" class="confirmID">중복확인</button>
+                </div>
+                <div class="input-pw">
+                    <p>PW</p>
+                    <input type="password"/>
+                </div>
+                <div class="input-repw">
+                    <p>PW확인</p>
+                    <input type="password"/>
+                </div>
+                <div class="input-email">
+                    <p>email</p>
+                    <input type="text">
+                </div>
+                <div class="check-state">
+                    <input type="radio" name="check-st" id="user" checked/><p>일반 유저</p>
+                    <input type="radio" name="check-st" id="admit"/><p>관리자</p>
+                </div>
+
+            <!-- btn -->
+                <div class="join-btn">
+                    <input type="submit" value="회원가입" id="joinMember"/>
+                    <input type="button" value="뒤로" class="back"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
