@@ -1,0 +1,384 @@
+@import "reset.css";
+
+body {
+background-color: #dddbdb;
+}
+
+.main {
+    width: 1440px;
+    height: 900px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    background-color: #F2F2F2;
+}
+
+/* menu */
+.main .menu {
+    position: absolute;
+    width: 140px;
+    height: 900px;
+    left: 0px;
+    top: 0px;
+    
+    background: #C4C4C4;
+}
+
+.main .menu .user-icon {
+    position: absolute;
+    width: 140px;
+    height: 121px;
+    left: 0px;
+    top: 51px;
+}
+
+.main .menu .user-icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 121px;
+    background: #949494;
+    background-image: url("https://img.icons8.com/ios-filled/2x/user-male.png");
+    background-repeat: no-repeat;
+    background-size: 75px;
+    background-position: center;
+}
+
+.main .menu .board-icon {
+    position: absolute;
+    width: 140px;
+    height: 121px;
+    left: 0px;
+    top: 182px;
+}
+
+.main .menu .board-icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 121px;
+    background: #C4C4C4;
+    background-image: url("https://img.icons8.com/ios-filled/2x/noticeboard.png");
+    background-repeat: no-repeat;
+    background-size: 75px;
+    background-position: center;
+}
+
+.main .menu .board-icon a:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 121px;
+    background: #b9b9b9;
+    background-image: url("https://img.icons8.com/ios-filled/2x/noticeboard.png");
+    background-repeat: no-repeat;
+    background-size: 75px;
+    background-position: center;
+}
+
+/* admin */
+/* .main .menu .users-icon {
+    position: absolute;
+    width: 140px;
+    height: 121px;
+    left: 0px;
+    top: 313px;
+}
+
+.main .menu .users-icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 121px;
+    background: #C4C4C4;
+    background-image: url("https://img.icons8.com/ios-glyphs/344/group.png");
+    background-repeat: no-repeat;
+    background-size: 75px;
+    background-position: center;
+}
+
+.main .menu .users-icon a:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 121px;
+    background: #b9b9b9;
+    background-image: url("https://img.icons8.com/ios-glyphs/344/group.png");
+    background-repeat: no-repeat;
+    background-size: 75px;
+    background-position: center;
+} */
+
+.main .menu .logout {
+    position: absolute;
+    width: 98px;
+    height: 40px;
+    left: 22px;
+    top: 816px;
+    background: #F94444;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    cursor: pointer;
+}
+
+.main .menu .logout:hover {
+    position: absolute;
+    width: 98px;
+    height: 40px;
+    left: 22px;
+    top: 816px;
+    background: #F94444;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+    cursor: pointer;
+}
+
+/* content */
+
+.main .content {
+    position: absolute;
+    left: 131px;
+}
+
+.main .content .outline{
+    position: absolute;
+    width: 720px;
+    height: 900px;
+    left: 306px;
+    top: 0px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main .content .outline .name-block {
+    width: 620px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    margin-top: 74px;
+}
+
+.main .content .outline .name-block p {
+    display: flex;
+    justify-content: flex-end;
+    width: 83px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    color: #000000;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+}
+
+.main .content .outline .name-block input {
+    width: 217px;
+    height: 42px;
+    margin-left: 20px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 0px 10px;
+    letter-spacing: 0.005em;
+}
+
+.main .content .outline .id-block {
+    width: 620px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    margin-top:25px;
+}
+
+.main .content .outline .id-block p {
+    display: flex;
+    justify-content: flex-end;
+    width: 100px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    color: #000000;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+}
+
+.main .content .outline .id-block input {
+    width: 100%;
+    height: 42px;
+    margin-left: 20px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 0px 10px;
+    letter-spacing: 0.005em;
+}
+
+.main .content .outline .pw-block {
+    width: 620px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    margin-top:25px;
+}
+
+.main .content .outline .pw-block p {
+    display: flex;
+    justify-content: flex-end;
+    width: 100px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    color: #000000;
+}
+
+.main .content .outline .pw-block input {
+    width: 100%;
+    height: 42px;
+    margin-left: 20px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 0px 10px;
+    letter-spacing: 0.005em;
+}
+.main .content .outline .email-block {
+    width: 620px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    margin-top:25px;
+}
+
+.main .content .outline .email-block p {
+    display: flex;
+    justify-content: flex-end;
+    width: 100px;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 100px;
+    letter-spacing: 0.005em;
+    color: #000000;
+    text-shadow: 0px 4px 20px rgba(53, 53, 53, 0.3);
+}
+
+.main .content .outline .email-block input {
+    width: 100%;
+    height: 42px;
+    margin-left: 20px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 0px 10px;
+    letter-spacing: 0.01em;
+}
+
+
+/* button */
+.main .content .outline #update {
+    flex: none;
+    position: absolute;
+    top: 489px;
+    left:162px;
+    width: 136px;
+    height: 37px;
+    background: #C4C4C4;
+    border:none;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    color: #000000;
+    cursor: pointer;
+}
+
+.main .content .outline #update:hover {
+    flex: none;
+    position: absolute;
+    top: 489px;
+    left:162px;
+    width: 136px;
+    height: 37px;
+    background: #C4C4C4;
+    border:1px solid black;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    color: #000000;
+    cursor: pointer;
+}
+
+.main .content .outline .back {
+    flex: none;
+    position: absolute;
+    top: 489px;
+    left: 330px;
+    background: #C4C4C4;
+    width: 136px;
+    height: 37px;
+    border:none;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    color: #000000;
+    cursor: pointer;
+}
+
+.main .content .outline .back:hover {
+    flex: none;
+    position: absolute;
+    top: 489px;
+    left: 330px;
+    background: #C4C4C4;
+    width: 136px;
+    height: 37px;
+    border:1px solid black;
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 0.005em;
+    color: #000000;
+    cursor: pointer;
+}
