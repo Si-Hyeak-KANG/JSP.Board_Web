@@ -1,5 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
+	isELIgnored="false" %>
+
+<%
+	request.setCharacterEncoding("UTF-8");
+%>
+
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/userInfo.css"/>
@@ -20,7 +32,7 @@
                 <a href="#"></a>
             </div> -->
             
-            <button class="logout">로그아웃</button>
+            <button class="logout">로그아웃</button>
         </div>
         
         <!-- content -->
@@ -29,7 +41,7 @@
                 <h1>개인 정보</h1>
                 <div class="info">
                     <div class="name-block">
-                        <p>이름</p>
+                        <p>이름</p>
                         <input type="text" value="강시혁" disabled/>
                     </div>
                     <div class="id-block">
@@ -45,7 +57,7 @@
                         <input type="text" value="zlcls456@naver.com" disabled/>
                     </div>
                     <div class="joinDate-block">
-                        <p>가입날짜</p>
+                        <p>가입 날짜</p>
                         <input type="date" vlaue="" disabled/>
                     </div>
                 </div>

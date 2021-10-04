@@ -1,5 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
+	isELIgnored="false" %>
+
+<%
+	request.setCharacterEncoding("UTF-8");
+%>
+
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/updateInfo.css"/>
@@ -26,7 +38,7 @@
         <div class="content">
             <div class="outline">
                 <div class="name-block">
-                    <p>이름</p>
+                    <p>이름</p>
                     <input type="text"/>
                 </div>
                 <div class="id-block">
