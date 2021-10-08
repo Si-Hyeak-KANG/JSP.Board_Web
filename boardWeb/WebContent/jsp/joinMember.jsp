@@ -38,7 +38,7 @@
                     <input type="password"/>
                 </div>
                 <div class="input-repw">
-                    <p>PWíì¸</p>
+                    <p>PW확인</p>
                     <input type="password"/>
                 </div>
                 <div class="input-email">
