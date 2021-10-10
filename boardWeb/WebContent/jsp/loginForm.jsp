@@ -36,7 +36,7 @@
             <h1>login</h1>
 
             <!-- login form -->
-            <form class="login-form">    
+            <form name="loginForm" class="login-form" >    
                 <div class="input-id">
                     <p>ID</p>
                     <input type="text">
@@ -47,7 +47,7 @@
                 </div>
                 <div class="mid">
                     <div class="join-member">
-                        <a href="#">회원가입</a>
+                        <a href="${contextPath}/member/joinMemberForm.do">회원가입</a>
                     </div>
                     <div class="search-id">
                         <a href="#">아이디 찾기</a>

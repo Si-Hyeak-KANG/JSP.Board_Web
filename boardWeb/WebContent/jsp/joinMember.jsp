@@ -23,27 +23,29 @@
             <h1>회원가입</h1>
 
             <!-- join form -->
-            <form action="">
+            <form name="joinForm" method="post" action="${contextPath}/member/joinMember.do">
                 <div class="input-name">
                     <p>이름</p>
-                    <input type="text"/>
+                    <input type="text" name="name"/>
                 </div>
                 <div class="input-id">
                     <p>ID</p>
-                    <input type="text"/>
-                    <button type="button" class="confirmID">중복 확인</button>
+                    <input type="text" name="id"/>
+                    <button type="button" class="confirmID" name="dbCheckId" onClick="dbCheckId(this.form)">
+                    	중복 확인
+                    </button>
                 </div>
                 <div class="input-pw">
                     <p>PW</p>
-                    <input type="password"/>
+                    <input type="password" name="pwd"/>
                 </div>
                 <div class="input-repw">
                     <p>PW확인</p>
-                    <input type="password"/>
+                    <input type="password" name="rePwd"/>
                 </div>
                 <div class="input-email">
                     <p>email</p>
-                    <input type="text">
+                    <input type="text" name="email">
                 </div>
                 <div class="check-state">
                     <input type="radio" name="check-st" id="user" checked/><p>일반 유저</p>
@@ -52,8 +54,8 @@
 
             <!-- btn -->
                 <div class="join-btn">
-                    <input type="submit" value="íìê°ì" id="joinMember"/>
-                    <input type="button" value="ë¤ë¡" class="back"/>
+                    <input type="submit" value="회원가입" id="joinMember"/>
+                    <input type="button" value="뒤로" class="back"/>
                 </div>
             </form>
         </div>
