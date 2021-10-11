@@ -48,8 +48,8 @@
                     <input type="text" name="email">
                 </div>
                 <div class="check-state">
-                    <input type="radio" name="check-st" id="user" checked/><p>일반 유저</p>
-                    <input type="radio" name="check-st" id="admin"/><p>관리자</p>
+                    <input type="radio" name="check-st" value="N"id="user" checked/><p>일반 유저</p>
+                    <input type="radio" name="check-st" value="Y" id="admin"/><p>관리자</p>
                 </div>
 
             <!-- btn -->

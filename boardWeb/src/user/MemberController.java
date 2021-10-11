@@ -60,12 +60,20 @@ public class MemberController extends HttpServlet {
 			} else if (action.equals("/joinMemberForm.do")) {	// move joinMemberForm
 				nextPage="/jsp/joinMember.jsp";
 			} else if (action.equals("/joinMember.do")) {	// success join
-				nextPage="/member/loginForm.do";
 				String id = request.getParameter("id");
 				String pwd = request.getParameter("pwd");
 				String name =request.getParameter("name");
 				String email = request.getParameter("email");
+				String admin = request.getParameter("check-st"); // is it admin?
+				memberVO.setId(id);
+				memberVO.setPwd(pwd);
+				memberVO.setName(name);
+				memberVO.setEmail(email);
+				memberVO.setAdmin(admin);
 				
+				memberService.addMember(memberVO);
+				
+				nextPage="/member/loginForm.do";
 			} else {
 				nextPage="/jsp/loginForm.jsp";
 			}
