@@ -1,6 +1,7 @@
 package user;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.Servlet;
@@ -55,11 +56,14 @@ public class MemberController extends HttpServlet {
 			
 			if(action==null) {
 				nextPage="/jsp/loginForm.jsp";
+				
 			} else if (action.equals("/loginForm.do")) {	// login page
 				nextPage="/jsp/loginForm.jsp";
+				
 			} else if (action.equals("/joinMemberForm.do")) {	// move joinMemberForm
 				nextPage="/jsp/joinMember.jsp";
-			} else if (action.equals("/joinMember.do")) {	// success join
+				
+			}else if (action.equals("/joinMember.do")) {	// success join
 				String id = request.getParameter("id");
 				String pwd = request.getParameter("pwd");
 				String name =request.getParameter("name");
@@ -73,7 +77,19 @@ public class MemberController extends HttpServlet {
 				
 				memberService.addMember(memberVO);
 				
-				nextPage="/member/loginForm.do";
+				String state;
+				if(admin.equals("Y")) {
+					System.out.println("관리자로 회원가입했습니다.");
+					state = "관리자";
+				} else {
+					System.out.println("일반 유저로 회원가입했습니다.");
+					state = "일반 유저";
+				}
+				PrintWriter pw = response.getWriter();
+				pw.println("<script>" + " alert('"+state+"로 회원가입했습니다.');" + " location.href='" + request.getContextPath() + "/member/loginForm.do';" + " </script>");
+				
+				return;
+				
 			} else {
 				nextPage="/jsp/loginForm.jsp";
 			}
