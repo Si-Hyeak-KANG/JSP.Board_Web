@@ -56,4 +56,30 @@ public class MemberDAO {
 		}
 	}
 	
+	// 아이디 중복 확인
+	public int selectAllId(String id) {
+		int result=-1; // 오류 발생
+		
+		try {
+			conn = dataFactory.getConnection();
+			String query = "SELECT id from B_member where id=?";
+			System.out.println(query);
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, id);
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) {
+				result=1; // 존재할 경우
+			}else {
+				result=0; // 존재하지 않을 경우
+			}
+			
+			rs.close();
+			pstmt.close();
+			conn.close();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
 }

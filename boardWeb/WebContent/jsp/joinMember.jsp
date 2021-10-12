@@ -25,8 +25,6 @@
 			var pwd = joinForm.pwd.value;
 			var rePwd = joinForm.rePwd.value;
 			var email = joinForm.email.value;
-		
-			
 			if(name.length==0 || name=="") {
 				alert("이름은 입력해주세요.");
 				document.joinForm.name.focus();
@@ -57,7 +55,16 @@
 			obj.submit();
 		}
 		
-
+		function fn_dbCheckId() {
+			var joinForm = document.joinForm;
+			var id = joinForm.id.value;
+			if(id.length==0 || id==""){
+				alert("아이디를 입력해주세요.");
+				joinForm.id.focus();
+			}else {
+			window.open("${contextPath}/member/dbCheckId.do?user_id="+id,"","width=500, height=300");
+			}
+		}
     </script>
 </head>
 <body>

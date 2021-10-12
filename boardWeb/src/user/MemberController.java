@@ -63,6 +63,11 @@ public class MemberController extends HttpServlet {
 			} else if (action.equals("/joinMemberForm.do")) {	// move joinMemberForm
 				nextPage="/jsp/joinMember.jsp";
 				
+			}else if(action.equals("/dbCheckId.do")) {
+				
+				String id = request.getParameter("id");
+				int result = memberService.idCheck(id);
+				nextPage="/jsp/dbCheckId.jsp";
 			}else if (action.equals("/joinMember.do")) {	// success join
 				String id = request.getParameter("id");
 				String pwd = request.getParameter("pwd");

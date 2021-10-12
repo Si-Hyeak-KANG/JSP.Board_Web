@@ -14,4 +14,9 @@ public class MemberService {
 		
 		memberDAO.insertNewMember(member);
 	}
+	
+	public int idCheck(String id) {
+		int result = memberDAO.selectAllId(id);
+		return result;
+	}
 }
