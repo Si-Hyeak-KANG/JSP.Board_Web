@@ -69,8 +69,10 @@ public class MemberDAO {
 			ResultSet rs = pstmt.executeQuery();
 			if(rs.next()) {
 				result=1; // 존재할 경우
+				System.out.println("result 값: " + result );
 			}else {
 				result=0; // 존재하지 않을 경우
+				System.out.println("result 값: " + result);
 			}
 			
 			rs.close();

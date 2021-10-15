@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 
@@ -45,12 +46,13 @@ public class MemberController extends HttpServlet {
 	}
 	
 	protected void doHandle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		HttpSession session = request.getSession(); // 技记 积己
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		String nextPage= null;
 		String action = request.getPathInfo();
 		System.out.println("action: " + action);
+		
 		
 		try {
 			
@@ -65,9 +67,12 @@ public class MemberController extends HttpServlet {
 				
 			}else if(action.equals("/dbCheckId.do")) {
 				
-				String id = request.getParameter("id");
+				String id = request.getParameter("user_id");
+				System.out.println("id甫 啊廉咳: " + id);
 				int result = memberService.idCheck(id);
+				session.setAttribute("result", result);
 				nextPage="/jsp/dbCheckId.jsp";
+				
 			}else if (action.equals("/joinMember.do")) {	// success join
 				String id = request.getParameter("id");
 				String pwd = request.getParameter("pwd");
