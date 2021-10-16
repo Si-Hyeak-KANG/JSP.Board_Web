@@ -81,8 +81,8 @@ background-color: #dddbdb;
     border-radius: 5px;
     width: 217px;
     height: 35px;
-    font-size: 20px;
-    padding: 0 5px;
+    font-size: 18px;
+    padding: 0 12px;
 }
 
 .main .join-form .input-id {
@@ -124,19 +124,19 @@ background-color: #dddbdb;
     box-sizing: border-box;
     box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    font-size: 20px;
-    padding: 0 5px;
-    margin-right: 50px;
+    font-size: 18px;
+    padding: 0 12px;
+    margin-right: 35px;
 }
 
-.main .join-form .input-id .confirmID {
+.main .join-form .input-id .checkId {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 80px;
     height: 35px;
-    background: #C4C4C4;
+    background: #c4c4c4;
     border-radius: 8px;
     box-sizing: border-box;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
@@ -145,10 +145,11 @@ background-color: #dddbdb;
     font-weight: bold;
     font-size: 15px;
     color: #ffffff;
-    cursor: pointer;   
+    cursor: pointer;
 }
 
-.main .join-form .input-id .confirmID:hover {
+/*
+.input-id .checkId:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -156,6 +157,7 @@ background-color: #dddbdb;
     width: 80px;
     height: 35px;
     background: #c4c4c462;
+    opacity:0.6;
     border-radius: 8px;
     box-sizing: border-box;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
@@ -164,9 +166,8 @@ background-color: #dddbdb;
     font-weight: normal;
     font-size: 15px;
     color: #000000;
-    cursor: pointer;   
 }
-
+*/
 
 .main .join-form .input-pw {
     position: absolute;
@@ -207,8 +208,8 @@ background-color: #dddbdb;
     box-sizing: border-box;
     box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    font-size: 20px;
-    padding: 0 5px;
+    font-size: 18px;
+    padding: 0 12px;
 }
 
 .main .join-form .input-repw {
@@ -247,8 +248,8 @@ background-color: #dddbdb;
     box-sizing: border-box;
     box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    font-size: 20px;
-    padding: 0 5px;
+    font-size: 18px;
+    padding: 0 12px;
 }
 
 .main .join-form .input-email {
@@ -287,8 +288,8 @@ background-color: #dddbdb;
     box-sizing: border-box;
     box-shadow: inset 0px 3px 10px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    font-size: 20px;
-    padding: 0 5px;
+    font-size: 18px;
+    padding: 0 12px;
 }
 
 .main .join-form .check-state {

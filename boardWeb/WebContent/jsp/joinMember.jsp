@@ -17,32 +17,36 @@
     <title>회원가입</title>
     <link rel="stylesheet" href="../css/joinMember.css"/>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript">	
 		function fn_joinMember() {
+
 			var joinForm = document.joinForm;
 			var name = joinForm.name.value;
 			var id = joinForm.id.value;
 			var pwd = joinForm.pwd.value;
 			var rePwd = joinForm.rePwd.value;
 			var email = joinForm.email.value;
+			
 			if(name.length==0 || name=="") {
 				alert("이름은 입력해주세요.");
-				document.joinForm.name.focus();
+				joinForm.name.focus();
 			}else if(id.length==0 || id=="") {
 				alert("아이디를 입력해주세요.")
-				document.joinForm.id.focus();
+				joinForm.id.focus();
+			}else if(joinForm.idDuplication.value!="idCheck") {
+				alert("아이디 중복체크를 해주세요.");
 			}else if(pwd.length==0 || pwd=="") {
 				alert("비밀번호를 입력해주세요");
-				document.joinForm.pwd.focus();
+				joinForm.pwd.focus();
 			}else if(rePwd.length==0 || rePwd=="") {
 				alert("비밀번호를 다시 입력해주세요.");
-				document.joinForm.rePwd.focus();
+				joinForm.rePwd.focus();
 			}else if(rePwd!=pwd) {
 				alert("입력하신 비밀번호가 틀립니다.");
-				document.joinForm.rePwd.focus();
+				joinForm.rePwd.focus();
 			}else if(email.length==0 || email=="") {
 				alert("이메일을 입력해주세요");
-				document.joinForm.email.focus();
+				joinForm.email.focus();
 			}else {
 				joinForm.method="post";
 				joinForm.action="${contextPath}/member/joinMember.do";
@@ -55,6 +59,14 @@
 			obj.submit();
 		}
 		
+		function inputIdChk() {
+			var joinForm = document.joinForm;
+			var dbCheckId = document.joinForm.dbCheckId;
+			document.joinForm.idDuplication.value="idUncheck";
+			dbCheckId.disabled=false;
+			dbCheckId.style.opacity=1;
+			dbCheckId.style.cursor="pointer";
+		}
 		function fn_dbCheckId() {
 			var joinForm = document.joinForm;
 			var id = joinForm.id.value;
@@ -80,18 +92,20 @@
                 </div>
                 <div class="input-id">
                     <p>ID</p>
-                    <input type="text" name="id"/>
-                    <button type="button" onclick="fn_dbCheckId()" class="confirmID" name="dbCheckId">
-                    	중복 확인
+                    <input type="text" name="id" onkeydown="inputIdChk()"/>
+                    <button type="button" onclick="fn_dbCheckId()" name="dbCheckId" class="checkId">
+						중복 확인
                     </button>
+                    <!-- 아이디 중복 체크 여부 -->
+                    <input type="hidden" name="idDuplication" value="idUncheck"/>
                 </div>
                 <div class="input-pw">
                     <p>PW</p>
-                    <input type="password" name="pwd"/>
+                    <input type="password" name="pwd" />
                 </div>
                 <div class="input-repw">
                     <p>PW확인</p>
-                    <input type="password" name="rePwd"/>
+                    <input type="password" name="rePwd" placeholder="비밀번호를 한번 더 입력해주세요."/>
                 </div>
                 <div class="input-email">
                     <p>email</p>
