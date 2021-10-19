@@ -84,4 +84,22 @@ public class MemberDAO {
 		
 		return result;
 	}
+	
+	public {
+		
+		String query = "SELECT admin from B_member where id=?";
+		
+		ResultSet rs = pstmt.excuteQuery();
+		
+		if(rs.next()) {
+			if (rs.getString(0).equals("Y")) {
+				System.out.println("관리자 입장합니다.");
+			}else {
+				System.out.println("USER 입장합니다.");
+			}
+		} else {
+			return;
+		}
+		
+	}
 }

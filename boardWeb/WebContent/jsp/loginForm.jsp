@@ -16,6 +16,23 @@
     <meta charset="UTF-8">
     <title>로그인창</title>
     <link rel="stylesheet" href="../css/loginForm.css">
+    <script type="text/javascript">
+    	function fn_login(){
+    		var loginForm = document.loginForm;
+    		var id = loginForm.id.value;
+    		var pwd = loginForm.pwd.value;
+    		
+    		if(id.length==0 || id=="") {
+    			alert("아이디를 입력해주세요.");
+    		} else if(pwd.length==0 || pwd=="") {
+    			alert("패스워드를 입력해주세요.");
+    		} else {
+    			loginForm.method="post";
+    			loginForm.action="${contextPath}/member/home.do";
+    			loginForm.submit();
+    		}
+    	}
+    </script>
 </head>
 <body>
     <div class="main">
@@ -39,11 +56,11 @@
             <form name="loginForm" class="login-form" >    
                 <div class="input-id">
                     <p>ID</p>
-                    <input type="text">
+                    <input type="text" name="id">
                 </div>
                 <div class="input-pw">
                     <p>PW</p>
-                    <input type="password">
+                    <input type="password" name="pwd">
                 </div>
                 <div class="mid">
                     <div class="join-member">
@@ -58,7 +75,7 @@
                 </div>
                 
                 <!-- login btn -->
-                <input type="button" value="로그인" id="login-btn"/>
+                <input type="button" value="로그인" id="login-btn" onclick="fn_login()"/>
                 <input type="button" value="facebook 로그인" id="facebook-btn"/>
                 <input type="button" value="카카오톡 로그인" id="kakao-btn"/>
             </form>

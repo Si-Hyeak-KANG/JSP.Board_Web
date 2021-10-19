@@ -67,6 +67,7 @@
 			dbCheckId.style.opacity=1;
 			dbCheckId.style.cursor="pointer";
 		}
+		
 		function fn_dbCheckId() {
 			var joinForm = document.joinForm;
 			var id = joinForm.id.value;

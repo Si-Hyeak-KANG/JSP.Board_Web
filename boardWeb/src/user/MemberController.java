@@ -65,7 +65,7 @@ public class MemberController extends HttpServlet {
 			} else if (action.equals("/joinMemberForm.do")) {	// move joinMemberForm
 				nextPage="/jsp/joinMember.jsp";
 				
-			}else if(action.equals("/dbCheckId.do")) {
+			}else if(action.equals("/dbCheckId.do")) { // Double Check Id page
 				
 				String id = request.getParameter("user_id");
 				System.out.println("id를 가져옴: " + id);
@@ -96,10 +96,21 @@ public class MemberController extends HttpServlet {
 					state = "일반 유저";
 				}
 				PrintWriter pw = response.getWriter();
-				pw.println("<script>" + " alert('"+state+"로 회원가입했습니다.');" + " location.href='" + request.getContextPath() + "/member/loginForm.do';" + " </script>");
+				pw.println("<script>" + " alert('"+state+"로 회원가입했습니다.');" 
+							+ " location.href='" + request.getContextPath() 
+							+ "/member/loginForm.do';" 
+							+ " </script>");
 				
 				return;
 				
+			} else if(action.equals("/home.do")) {
+				String id = request.getParameter("id");
+				String pwd = request.getParameter("pwd");
+				
+				memberVO = MemberService.memberLogin(id,pwd);
+				
+				
+				nextPage = "/jsp/home.jsp";
 			} else {
 				nextPage="/jsp/loginForm.jsp";
 			}

@@ -19,4 +19,10 @@ public class MemberService {
 		int result = memberDAO.selectAllId(id);
 		return result;
 	}
+	
+	public void memberLogin(String id,String pwd) {
+		memberDAO.selectMemberId(id);
+		memberDAO.selectMemberPwd(pwd);
+		memberDAO.selectMemberAdmin();
+	}
 }
