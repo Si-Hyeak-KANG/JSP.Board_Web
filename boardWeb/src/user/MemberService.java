@@ -10,19 +10,22 @@ public class MemberService {
 
 	}
 	
+	// 회원 추가
 	public void addMember(MemberVO member) {
 		
 		memberDAO.insertNewMember(member);
 	}
 	
+	// id 중복 체크
 	public int idCheck(String id) {
-		int result = memberDAO.selectAllId(id);
-		return result;
+		
+		return memberDAO.selectAllId(id);
 	}
 	
-	public void memberLogin(String id,String pwd) {
-		memberDAO.selectMemberId(id);
-		memberDAO.selectMemberPwd(pwd);
-		memberDAO.selectMemberAdmin();
+	// 로그인
+	public boolean memberLogin(MemberVO member) {
+		
+		return memberDAO.selectMemberId(member);
+		
 	}
 }

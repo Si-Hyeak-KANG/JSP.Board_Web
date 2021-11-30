@@ -85,21 +85,40 @@ public class MemberDAO {
 		return result;
 	}
 	
-	public {
+	// 아이디, 패스워드 존재 유무 체크
+	public boolean selectMemberId(MemberVO member) {
 		
-		String query = "SELECT admin from B_member where id=?";
+		boolean idExist = false; // 아이디 존재 유무
+		String id = member.getId();
+		String pwd = member.getPwd();
 		
-		ResultSet rs = pstmt.excuteQuery();
-		
-		if(rs.next()) {
-			if (rs.getString(0).equals("Y")) {
-				System.out.println("관리자 입장합니다.");
-			}else {
-				System.out.println("USER 입장합니다.");
+		try {
+			conn = dataFactory.getConnection();
+			String query = "SELECT admin from B_table where id=?,pwd=?";
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pwd);
+			ResultSet rs = pstmt.executeQuery();
+			if(rs.next()) { // 회원이 있을 시
+				
+				idExist = true;
+				String admin = rs.getString("admin");
+				member.setAdmin("admin");
+				
+				return idExist;
 			}
-		} else {
-			return;
+			
+			rs.close();
+			pstmt.close();
+			conn.close();
+			
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
 		
+		return idExist;
 	}
+
+
+
 }

@@ -3,6 +3,7 @@
 
 <%
 	request.setCharacterEncoding("UTF-8");
+	String admin = (String) session.getAttribute("admin"); // Y/N
 %>
 
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -29,9 +30,12 @@
             </div>
 
             <!-- admin -->
-            <!-- <div class="users-icon">
+			<c:if test="${admin=='Y'}">
+			
+            <div class="users-icon">
                 <a href="#"></a>
-            </div> -->
+            </div> 
+			</c:if>
             
             <button class="logout">로그아웃</button>
         </div>
@@ -42,10 +46,16 @@
                 <p class="title">Board Web</p>
                 <p class="sub-title">project01</p>
             </div>
+            
+        <c:chosse>
+        <c:when test="${admin=='N'}">
             <h1>일반 유저입니다.</h1>
-
+		</c:when>
+		<c:otherwise>
             <!-- admin -->
-            <!--<h1>관리자 입니다.</h1>-->
+            <h1>관리자 입니다.</h1>
+        </c:otherwise>
+        </c:chosse>
         </div>
     </div>
 </body>

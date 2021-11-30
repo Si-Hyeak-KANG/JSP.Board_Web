@@ -104,13 +104,36 @@ public class MemberController extends HttpServlet {
 				return;
 				
 			} else if(action.equals("/home.do")) {
+				PrintWriter pw = response.getWriter();
 				String id = request.getParameter("id");
 				String pwd = request.getParameter("pwd");
+				memberVO.setId(id);
+				memberVO.setPwd(pwd);
 				
-				memberVO = MemberService.memberLogin(id,pwd);
+				boolean idExist = memberService.memberLogin(memberVO);
+				
+				if(idExist == true) { // 아이디, 비밀번호가 정확한 경우
+					String admin = memberVO.getAdmin();
+					String state = null;
+					session.setAttribute("admin",admin);
+					if (admin.equals("Y")) {
+						state = "관리자";
+					} else {
+						state = "일반인";
+					}
+					System.out.println(state + "(으)로 로그인합니다.");
+					nextPage = "/jsp/home.jsp";
+					
+				} else {
+					System.out.println("회원 정보가 없습니다.");
+					pw.println("<script>" + "alert('(null)회원 정보가 없습니다.');" 
+								+ " location.href='" + request.getContextPath()
+								+ "/member/loginForm.do';" + " </script>");
+					
+					
+				}
 				
 				
-				nextPage = "/jsp/home.jsp";
 			} else {
 				nextPage="/jsp/loginForm.jsp";
 			}
